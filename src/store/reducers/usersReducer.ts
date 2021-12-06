@@ -1,4 +1,11 @@
-import { UsersAction, UsersActionType, UsersState } from '../../types/users';
+import {
+    FetchErrorAction,
+    FetchUsersAction,
+    FetchUsersSuccessAction,
+    UsersAction,
+    UsersActionType,
+    UsersState,
+} from '../../types/users';
 
 const initialState: UsersState = {
     isLoading: false,
@@ -22,3 +29,19 @@ export const usersReducer = (
             return state;
     }
 };
+
+export const fetchUsersAction = (): FetchUsersAction => ({
+    type: UsersActionType.FETCH_USERS,
+});
+
+export const fetchUsersSuccessAction = (
+    payload: any[]
+): FetchUsersSuccessAction => ({
+    type: UsersActionType.FETCH_USERS_SUCCESS,
+    payload,
+});
+
+export const fetchErrorAction = (payload: string): FetchErrorAction => ({
+    type: UsersActionType.FETCH_ERROR,
+    payload,
+});

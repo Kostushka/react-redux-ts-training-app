@@ -8,14 +8,14 @@ export enum UsersActionType {
 
 // action types
 
-interface FetchUsersAction {
+export interface FetchUsersAction {
     type: UsersActionType.FETCH_USERS;
 }
-interface FetchUsersSuccessAction {
+export interface FetchUsersSuccessAction {
     type: UsersActionType.FETCH_USERS_SUCCESS;
     payload: any[];
 }
-interface FetchErrorAction {
+export interface FetchErrorAction {
     type: UsersActionType.FETCH_ERROR;
     payload: string;
 }
