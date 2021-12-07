@@ -1,4 +1,4 @@
-// constants
+// actions type
 
 export enum UsersActionType {
     FETCH_USERS = 'FETCH_USERS',
@@ -6,7 +6,7 @@ export enum UsersActionType {
     FETCH_ERROR = 'FETCH_ERROR',
 }
 
-// action types
+// actions creator
 
 export interface FetchUsersAction {
     type: UsersActionType.FETCH_USERS;

@@ -1,0 +1,21 @@
+.pages {
+    display: flex;
+    margin-top: 10px;
+}
+
+.active,
+.page {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid transparent;
+}
+
+.page:hover {
+    background-color: rgb(250, 173, 159);
+    cursor: pointer;
+}
+
+.active {
+    background-color: tomato;
+    border-color: red;
+}

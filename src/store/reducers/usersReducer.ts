@@ -19,11 +19,21 @@ export const usersReducer = (
 ): UsersState => {
     switch (action.type) {
         case UsersActionType.FETCH_USERS:
-            return { isLoading: true, error: null, users: [] };
+            return { ...state, isLoading: true, error: null, users: [] };
         case UsersActionType.FETCH_USERS_SUCCESS:
-            return { isLoading: false, error: null, users: action.payload };
+            return {
+                ...state,
+                isLoading: false,
+                error: null,
+                users: action.payload,
+            };
         case UsersActionType.FETCH_ERROR:
-            return { isLoading: false, error: action.payload, users: [] };
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload,
+                users: [],
+            };
 
         default:
             return state;
